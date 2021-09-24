@@ -32,3 +32,4 @@
 /data/*
 !/data/questions.csv
 .Rproj.user
+!/data/sus_results_demo.csv

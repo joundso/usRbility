@@ -147,6 +147,7 @@ usethis::use_git_ignore("!/ieee.csl")
 usethis::use_git_ignore("!/data")
 usethis::use_git_ignore("/data/*")
 usethis::use_git_ignore("!/data/questions.csv")
+usethis::use_git_ignore("!/data/sus_results_demo.csv")
 
 # code coverage
 # covr::package_coverage()
