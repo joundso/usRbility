@@ -1,0 +1,5 @@
+# Whitelist for mdspell (used in .gitlab-ci)
+# One word per line
+# Lines starting with # will be ignored
+# begin here:
+thiswillbeignored

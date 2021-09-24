@@ -1,0 +1,32 @@
+id,question,lang,system,category
+1,"Ich denke, dass ich das Tool gerne häufig benutzen würde.",de,sus, 
+2,Ich fand das Tool unnötig komplex.,de,sus, 
+3,Ich fand das Tool einfach zu benutzen.,de,sus, 
+4,"Ich glaube, ich würde die Hilfe einer technisch versierten Person benötigen, um das Tool benutzen zu können.",de,sus, 
+5,"Ich fand, die verschiedenen Funktionen in diesem Tool waren gut integriert.",de,sus, 
+6,"Ich denke, das Tool enthielt zu viele Inkonsistenzen.",de,sus, 
+7,"Ich kann mir vorstellen, dass die meisten Menschen den Umgang mit diesem Tool sehr schnell lernen.",de,sus, 
+8,Ich fand das Tool sehr umständlich zu nutzen.,de,sus, 
+9,Ich fühlte mich bei der Benutzung des Tools sehr sicher.,de,sus, 
+10,"Ich musste eine Menge lernen, bevor ich anfangen konnte das Tool zu verwenden.",de,sus, 
+11,Sonstiges Feedback:,de,sus,""
+34,I think [BidShift] has been [a positive addition to Nursing].,en,health-itues,System impact-career mission
+33,I think BidShift has been [a positive addition to our organization].,en,health-itues,System impact-organizational level
+35,[BidShift technology] is an important part of [our staffing process].,en,health-itues,System impact-personal level
+29,Using [Bidshift] makes it easier to [request the shift I want].,en,health-itues,Productiveness
+26,Using [Bidshift] enables me to [request shifts] more quickly.,en,health-itues,Productiveness
+28,Using [Bidshift] makes it more likely that I [will be awarded a shift that I request].,en,health-itues,Productiveness
+30,Using [Bidshift] is useful for [requesting open shifts].,en,health-itues,General usefulness
+25,I think [Bidshift] presents a more equitable process for [requesting open shifts].,en,health-itues,General usefulness
+31,I am satisfied with [Bidshift] for [requesting open shifts].,en,health-itues,General satisfaction
+21,I [am awarded shifts] in a timely manner because of [Bidshift].,en,health-itues,Performance speed
+27,Using [Bidshift] increases [requesting open shifts].,en,health-itues,Productiveness
+14,I am able to [find shifts that I am qualified to work] whenever I use [Bidshift].,en,health-itues,Information needs
+5,I am comfortable with my ability to use [Bidshift].,en,health-itues,Competency
+4,Learning to operate [Bidshift] is easy for me.,en,health-itues,Learnability
+6,It is easy for me to become skillful at using [Bidshift].,en,health-itues,Competency
+22,I find [Bidshift] easy to use.,en,health-itues,Ease of use
+10,I can always remember how to log on to and use [Bidshift].,en,health-itues,Memorability
+12,[Bidshift] gives error messages that clearly tell me how to fix problems.,en,health-itues,Error Prevention
+13,"Whenever I make a mistake using [Bidshift], I recover easily and quickly.",en,health-itues,Error Prevention
+16,"The information (such as on-line help, on-screen messages and other documentation) provided with [Bidshift] is clear.",en,health-itues,Information needs

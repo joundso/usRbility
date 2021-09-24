@@ -1,0 +1,72 @@
+---
+title: "usRbility"
+# author:
+#   - name: Jonathan M. Mang
+#     email: jonathan.mang@uk-erlangen.de
+#     institute: [er_diz, er_fak]
+# institute:
+#   - er_diz: Medical Center for Information and Communication Technology, Universitätsklinikum Erlangen, Erlangen, Germany.
+#   - er_fak: Chair of Medical Informatics, Friedrich-Alexander-University Erlangen-Nürnberg (FAU), Erlangen, Germany.
+output: github_document
+bibliography: references.bib
+link-citations: true
+# csl: ios-press-books.csl
+csl: ieee.csl
+# styles from https://github.com/citation-style-language/styles
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- badges: start -->
+
+[![codecov](https://codecov.io/gh/joundso/usRbility/branch/master/graph/badge.svg)](https://codecov.io/gh/joundso/usRbility)
+[![CRAN Status Badge](https://www.r-pkg.org/badges/version-ago/usRbility)](https://cran.r-project.org/package=usRbility)
+[![Cran Checks](https://cranchecks.info/badges/worst/usRbility)](https://cran.r-project.org/web/checks/check_results_usRbility.html)
+
+<!-- badges: end -->
+
+The R package `usRbility` provides functions usefully to create questionnaires and evaluate them using common usability scales or toolings with the goal to measure a systems usability.
+
+## Installation
+
+<!---
+You can install `usRbility` directly from CRAN:
+
+```r
+install.packages("usRbility")
+```
+-->
+
+The development version can be installed using
+
+```r
+install.packages("devtools")
+devtools::install_github("joundso/usRbility", ref = "development")
+```
+
+## Basic functions
+
+### Get all currently implemented usability toolings
+
+```{r list_toolings}
+usRbility::get_all_toolings()
+```
+
+## Implemented Usability Scores and Toolings
+
+### System Usability Scale (SUS)
+
+The System Usability Scale originally was described in 1986 and consists of `r 10` questions [@brooke1996].
+
+### Health IT Usability Evaluation Scale (Health-ITUES)
+
+The Health-ITUES was described in 2010 and consists of `r 10` questions [@yen2010a].
+
+## More Infos
+
+- About MIRACUM: <https://www.miracum.org/>
+- About the Medical Informatics Initiative: <https://www.medizininformatik-initiative.de/index.php/de>
+
+## References
