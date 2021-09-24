@@ -2,3 +2,6 @@
 
 export(get_all_toolings)
 export(get_sus_questions)
+export(get_sus_score_raw)
+export(get_sus_score_total)
+export(melt_response_data)
