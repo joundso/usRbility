@@ -23,11 +23,11 @@
 #'   an ordered list instead of a data.table.
 #' @export
 #'
-get_sus_questions <-
+get_health_itues_questions <-
   function(language = "en",
            questions_only = FALSE) {
     return(get_questions(
-      sys = "sus",
+      sys = "health-itues",
       language = language,
       questions_only = questions_only
     ))

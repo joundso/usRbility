@@ -14,13 +14,21 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-#' @title Get all toolings currently implemented
-#' @description Get all toolings currently implemented
-#' @return (list) All currently implemented usability toolings
+#' @title Get all systems currently implemented
+#' @description Get all systems currently implemented. If no language is
+#'   supplied here, all systems will be shown (independent of their language).
+#'   Otherwise (if a language is supplied), the result will only show the
+#'   systems implemented for the given language.
+#' @inheritParams get_questions
+#' @return (list) All currently implemented usability systems
 #' @export
 #'
-get_all_toolings <- function() {
+get_all_systems <- function(language = NULL) {
   questions <- data.table::fread(file = "./data/questions.csv",
                                  stringsAsFactors = FALSE)
-  return(unique(questions[["system"]]))
+  if (!is.null(language)) {
+    return(unique(questions[get("lang") == language][["system"]]))
+  } else {
+    return(unique(questions[["system"]]))
+  }
 }
