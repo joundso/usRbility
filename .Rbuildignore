@@ -12,3 +12,7 @@
 ^CRAN-RELEASE$
 ^cran-comments\.md$
 ^logfile\.log$
+^README\.Rmd$
+^ieee\.csl$
+^references\.bib$
+^renovate\.json$

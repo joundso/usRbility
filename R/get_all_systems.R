@@ -24,7 +24,7 @@
 #' @export
 #'
 get_all_systems <- function(language = NULL) {
-  questions <- data.table::fread(file = "./data/questions.csv",
+  questions <- data.table::fread(file = "./data-raw/questions.csv",
                                  stringsAsFactors = FALSE)
   if (!is.null(language)) {
     return(unique(questions[get("lang") == language][["system"]]))

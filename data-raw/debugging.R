@@ -5,7 +5,7 @@ invisible(gc()) # Garbage collector/Clear unused RAM
 devtools::load_all()
 
 ## Start to code here:
-sus_data <- data.table::fread(file = "./data/sus_results_demo.csv")
+sus_data <- data.table::fread(file = "./data-raw/sus_results_demo.csv")
 sus_data_melt <- melt_response_data(data = sus_data)
 get_sus_stats(data = sus_data_melt)[["mean"]]
 

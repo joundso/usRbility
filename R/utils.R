@@ -24,11 +24,7 @@
 #'
 melt_response_data <- function(data) {
   if (length(names(data)) < 2) {
-    DIZutils::feedback(
-      print_this = paste0("There is no content in the dataset. Skipping"),
-      type = "Warning",
-      findme = "1e308a329f"
-    )
+    print("There is no content in the dataset. Skipping")
     return(NULL)
   }
   result <-
@@ -36,4 +32,3 @@ melt_response_data <- function(data) {
   data.table::setnames(x = result, old = "variable", new = "responder")
   return(result)
 }
-

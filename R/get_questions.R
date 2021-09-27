@@ -32,7 +32,7 @@ get_questions <-
   function(sys,
            language = "en",
            questions_only = FALSE) {
-    questions <- data.table::fread(file = "./data/questions.csv",
+    questions <- data.table::fread(file = "./data-raw/questions.csv",
                                    stringsAsFactors = FALSE)
 
     res <-

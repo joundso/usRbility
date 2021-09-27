@@ -32,7 +32,7 @@ my_desc$del("Maintainer")
 my_desc$del("LazyData")
 
 # Set the version
-my_desc$set_version("0.0.0.9002")
+my_desc$set_version("0.0.0.9003")
 
 # The title of your package
 my_desc$set(Title = "Popular toolings for usability testing")
@@ -94,6 +94,7 @@ usethis::use_package("R", min_version = "3.1.0", type = "Depends")
 ## Imports
 # usethis::use_package("DIZutils", type = "Imports")
 usethis::use_package("data.table", type = "Imports")
+usethis::use_package("psych", type = "Imports")
 
 ## Suggests
 usethis::use_package("testthat", type = "Suggests")
@@ -111,6 +112,10 @@ usethis::use_build_ignore("tic.R")
 usethis::use_build_ignore(".github")
 usethis::use_build_ignore("cran-comments.md")
 usethis::use_build_ignore("logfile.log")
+usethis::use_build_ignore("README.Rmd")
+usethis::use_build_ignore("ieee.csl")
+usethis::use_build_ignore("references.bib")
+usethis::use_build_ignore("renovate.json")
 # usethis::use_build_ignore("NEWS.md")
 
 # gitignore
@@ -148,6 +153,10 @@ usethis::use_git_ignore("!/data")
 usethis::use_git_ignore("/data/*")
 usethis::use_git_ignore("!/data/questions.csv")
 usethis::use_git_ignore("!/data/sus_results_demo.csv")
+
+## Datasets:
+# usethis::use_r("questions")
+# usethis::use_r("sus_results_demo")
 
 # code coverage
 # covr::package_coverage()
