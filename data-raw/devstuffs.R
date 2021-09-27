@@ -154,6 +154,8 @@ usethis::use_git_ignore("/data/*")
 usethis::use_git_ignore("!/data/questions.csv")
 usethis::use_git_ignore("!/data/sus_results_demo.csv")
 
+# usethis::use_citation()
+
 ## Datasets:
 # usethis::use_r("questions")
 # usethis::use_r("sus_results_demo")
