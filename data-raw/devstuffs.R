@@ -14,8 +14,9 @@ my_desc$set("Package", packagename)
 # Full list of roles: http://www.loc.gov/marc/relators/relaterm.html
 my_desc$set_authors(c(
   person(
-    "Jonathan M.",
-    "Mang",
+    given = "Jonathan",
+    middle = "M.",
+    family = "Mang",
     role = c("aut", "cre"),
     email = "jonathan.mang@uk-erlangen.de",
     comment = c(ORCID = "0000-0003-0518-4710")
@@ -29,10 +30,10 @@ my_desc$set_authors(c(
 
 # Remove some author fields
 my_desc$del("Maintainer")
-my_desc$del("LazyData")
+# my_desc$del("LazyData")
 
 # Set the version
-my_desc$set_version("0.0.0.9003")
+my_desc$set_version("0.0.0.9004")
 
 # The title of your package
 my_desc$set(Title = "Popular toolings for usability testing")
@@ -66,11 +67,12 @@ my_desc$set("BugReports",
 my_desc$set("License", "GPL-3")
 
 # System requirements (for CRAN to avoid Rpostgres-errors):
-my_desc$set("SystemRequirements",
-            "libpq >= 9.0: libpq-dev (deb) or postgresql-devel (rpm)")
+# my_desc$set("SystemRequirements",
+#             "libpq >= 9.0: libpq-dev (deb) or postgresql-devel (rpm)")
 
 # Save everyting
 my_desc$write(file = "DESCRIPTION")
+
 
 # License
 #usethis::use_gpl3_license(name = "Universitätsklinikum Erlangen")
@@ -155,6 +157,7 @@ usethis::use_git_ignore("!/data/questions.csv")
 usethis::use_git_ignore("!/data/sus_results_demo.csv")
 
 # usethis::use_citation()
+# usethis::create_package()
 
 ## Datasets:
 # usethis::use_r("questions")

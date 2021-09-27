@@ -32,8 +32,7 @@ get_questions <-
   function(sys,
            language = "en",
            questions_only = FALSE) {
-    questions <- data.table::fread(file = "./data-raw/questions.csv",
-                                   stringsAsFactors = FALSE)
+    questions <- usRbility::questions
 
     res <-
       questions[get("lang") == language &
