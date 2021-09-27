@@ -41,7 +41,7 @@ The development version can be installed using
 
 ``` r
 install.packages("devtools")
-devtools::install_github("joundso/usRbility", ref = "dev")
+devtools::install_github("joundso/usRbility", ref = "development")
 ```
 
 ## Basic functions
