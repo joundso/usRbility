@@ -32,7 +32,7 @@ my_desc$del("Maintainer")
 my_desc$del("LazyData")
 
 # Set the version
-my_desc$set_version("0.0.0.9001")
+my_desc$set_version("0.0.0.9002")
 
 # The title of your package
 my_desc$set(Title = "Popular toolings for usability testing")
@@ -55,9 +55,9 @@ my_desc$set("Date" = as.character(Sys.Date()))
 my_desc$set("Language" = "en-US")
 
 # The urls
-my_desc$set("URL", "https://github.com/joundso/mainzelliste-connector")
+my_desc$set("URL", "https://github.com/joundso/usRbility")
 my_desc$set("BugReports",
-            "https://github.com/joundso/mainzelliste-connector/issues")
+            "https://github.com/joundso/usRbility/issues")
 
 # Vignette Builder
 # my_desc$set("VignetteBuilder" = "knitr")

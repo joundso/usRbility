@@ -36,3 +36,4 @@ melt_response_data <- function(data) {
   data.table::setnames(x = result, old = "variable", new = "responder")
   return(result)
 }
+

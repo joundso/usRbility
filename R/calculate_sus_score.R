@@ -18,7 +18,16 @@
 #' @description Takes a table with the results to each question and
 #'   calculates the SUS score for each respondent.
 #' @param data (data.table) The table containing the results for each question
-#'   and respondent.
+#'   and respondent. This data must be molten - so if your input is still
+#'   very wide (with one column per respondent), first apply
+#'   `melt_response_data` on the wide data to obtain long data instead.
+#' @import data.table
+#' @examples
+#' \dontrun{
+#' sus_data <- data.table::fread(file = "./data/sus_results_demo.csv")
+#' sus_data_melt <- melt_response_data(data = sus_data)
+#' get_sus_score_raw(data = sus_data_melt)
+#' }
 #'
 #' @return (data.table) The SUS score for each respondent.
 #' @export
@@ -47,26 +56,34 @@ get_sus_score_raw <- function(data) {
 
 #' @title Calculate the SUS score
 #' @description Takes a table with the results to each question and
-#'   calculates the overall SUS score.
-#' @param data (data.table) The table containing the results for each question
-#'   and respondent.
-#'
+#'   calculates the stats over all respondents.
+#' @inheritParams get_sus_score_raw
 #' @return (data.table) The statistics about the results (min, max, mean,
 #'   median, N).
 #' @export
+#' @examples
+#' \dontrun{
+#' sus_data <- data.table::fread(file = "./data/sus_results_demo.csv")
+#' sus_data_melt <- melt_response_data(data = sus_data)
+#' get_sus_stats(data = sus_data_melt)[["mean"]]
+#' }
 #'
-get_sus_score_total <- function(data) {
-
+get_sus_stats <- function(data) {
+  return(psych::describe(get_sus_score_raw(data = data)))
 }
 
-get_sus_stats <- function(instance) {
-  return(psych::describe(calculate_sus_score(instance = instance)))
-}
-
-get_sus_mean <- function(instance) {
-  return(get_sus_stats(instance = instance)[["mean"]])
-}
-
-get_sus_n <- function(instance) {
-  return(get_sus_stats(instance = instance)[["n"]])
+#' @title Calculate the mean SUS score over multiple respondents
+#' @description Takes a table with the results to each question and
+#'   calculates the overall SUS score.
+#' @inheritParams get_sus_score_raw
+#' @return (numeric) The mean over all respondents
+#' @export
+#' @examples
+#' \dontrun{
+#' sus_data <- data.table::fread(file = "./data/sus_results_demo.csv")
+#' sus_data_melt <- melt_response_data(data = sus_data)
+#' get_sus_mean(data = sus_data_melt)
+#' }
+get_sus_mean <- function(data) {
+  return(get_sus_stats(data = data)[["mean"]])
 }
