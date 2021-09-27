@@ -7,7 +7,9 @@ title: "usRbility"
 # institute:
 #   - er_diz: Medical Center for Information and Communication Technology, Universitätsklinikum Erlangen, Erlangen, Germany.
 #   - er_fak: Chair of Medical Informatics, Friedrich-Alexander-University Erlangen-Nürnberg (FAU), Erlangen, Germany.
-output: github_document
+output: 
+  github_document:
+    toc: true
 bibliography: references.bib
 link-citations: true
 # csl: ios-press-books.csl
@@ -17,6 +19,7 @@ csl: ieee.csl
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+devtools::load_all()
 ```
 
 <!-- badges: start -->
@@ -51,18 +54,32 @@ devtools::install_github("joundso/usRbility", ref = "development")
 ### Get all currently implemented usability toolings
 
 ```{r list_toolings}
-usRbility::get_all_toolings()
+usRbility::get_all_systems()
 ```
 
 ## Implemented Usability Scores and Toolings
 
 ### System Usability Scale (SUS)
 
-The System Usability Scale originally was described in 1986 and consists of `r 10` questions [@brooke1996].
+The System Usability Scale originally was described in 1986 and consists of `r get_sus_questions()[,.N]` questions [@brooke1996].
+
+Its questions are:
+
+```{r list_sus_questions, results='asis'}
+for (q in usRbility::get_sus_questions(language = "en", questions_only = TRUE)) {
+  cat(paste0("1. ", q, "\n"))
+}
+```
+
 
 ### Health IT Usability Evaluation Scale (Health-ITUES)
 
-The Health-ITUES was described in 2010 and consists of `r 10` questions [@yen2010a].
+The Health-ITUES was described in 2010 and consists of `r get_health_itues_questions()[,.N]` questions [@yen2010a].
+
+Its questions are:
+```{r list_health_itues_questions}
+usRbility::get_health_itues_questions(language = "en", questions_only = TRUE)
+```
 
 ## More Infos
 
