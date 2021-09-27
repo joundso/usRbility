@@ -65,12 +65,15 @@ The System Usability Scale originally was described in 1986 and consists of `r g
 
 Its questions are:
 
-```{r list_sus_questions, results='asis'}
-for (q in usRbility::get_sus_questions(language = "en", questions_only = TRUE)) {
-  cat(paste0("1. ", q, "\n"))
-}
-```
+<!-- ```{r list_sus_questions, results='asis'} -->
+<!-- for (q in usRbility::get_sus_questions(language = "en", questions_only = TRUE)) { -->
+<!--   cat(paste0("1. ", q, "\n")) -->
+<!-- } -->
+<!-- ``` -->
 
+```{r list_sus_questions}
+usRbility::get_sus_questions(language = "en", questions_only = TRUE)
+```
 
 ### Health IT Usability Evaluation Scale (Health-ITUES)
 
