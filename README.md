@@ -118,7 +118,7 @@ usRbility::get_health_itues_questions(language = "en", questions_only = TRUE)
 
 ## More Infos
 
--   About MIRACUM: <https://www.miracum.org/>
+-   About MIRACUM: <https://www.miracum.org>
 -   About the Medical Informatics Initiative:
     <https://www.medizininformatik-initiative.de/index.php/de>
 
