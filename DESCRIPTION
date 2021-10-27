@@ -1,17 +1,13 @@
 Package: usRbility
 Title: Popular toolings for usability testing
-Version: 0.0.0.9004
-Date: 2021-09-27
-Authors@R: 
-    c(person(given = c("Jonathan", "M."),
-             family = "Mang",
-             role = c("aut", "cre"),
-             email = "jonathan.mang@uk-erlangen.de",
-             comment = c(ORCID = "0000-0003-0518-4710")),
-      person(given = "MIRACUM - Medical Informatics in Research and Care in University Medicine",
-             role = "fnd"),
-      person(given = "Universitätsklinikum Erlangen",
-             role = "cph"))
+Version: 0.0.0.9005
+Date: 2021-10-27
+Authors@R: c(
+    person(c("Jonathan", "M."), "Mang", , "jonathan.mang@uk-erlangen.de", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0518-4710")),
+    person("MIRACUM - Medical Informatics in Research and Care in University Medicine", role = "fnd"),
+    person("Universitätsklinikum Erlangen", role = "cph")
+  )
 Description: Questions and evaluation functions for popular usability
     testing tools like the 'System Usability Scale' (SUS), or the 'Health
     Information Technology Usability Evaluation Scale' (Health-ITUES).
@@ -28,5 +24,4 @@ Suggests:
     testthat
 Encoding: UTF-8
 Language: en-US
-LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
