@@ -42,11 +42,18 @@ install.packages("usRbility")
 ```
 -->
 
-The development version can be installed using
+The latest version can be installed using
 
 ```r
 install.packages("devtools")
 devtools::install_github("joundso/usRbility", ref = "master")
+```
+
+The development version can be installed using
+
+```r
+install.packages("devtools")
+devtools::install_github("joundso/usRbility", ref = "dev")
 ```
 
 ## Basic functions

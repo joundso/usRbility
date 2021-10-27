@@ -33,3 +33,10 @@
 !/data/questions.csv
 .Rproj.user
 !/data/sus_results_demo.csv
+!/data-raw
+/data-raw/*
+!/data-raw/debugging.R
+!/data-raw/devstuffs.R
+!/data-raw/questions.csv
+!/data-raw/questions.R
+!/data-raw/sus_results_demo.csv
