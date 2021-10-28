@@ -27,6 +27,17 @@ melt_response_data <- function(data) {
     print("There is no content in the dataset. Skipping")
     return(NULL)
   }
+
+  ## Remove column `Questionnaire` if still existing:
+  if ("questionnaire" %in% tolower(names(data))) {
+    remove_names <-
+      names(data)[grepl(pattern = "questionnaire",
+                        x = names(data),
+                        ignore.case = TRUE)]
+    data <-
+      data[, .SD, .SDcols = setdiff(names(data), remove_names)]
+  }
+
   result <-
     data.table::as.data.table(data.table::melt(data = data, id.vars = "id_official"))
   data.table::setnames(x = result, old = "variable", new = "responder")

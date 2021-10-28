@@ -21,6 +21,9 @@
 #'   and respondent. This data must be molten - so if your input is still
 #'   very wide (with one column per respondent), first apply
 #'   `melt_response_data` on the wide data to obtain long data instead.
+#' @param keep_respondents (boolean, default = `FALSE`) Do you want to get
+#'   a named list with the keys beeing the respondents from the input data
+#'   and the values beeing the actual result for this respondent?
 #' @import data.table
 #' @examples
 #' \dontrun{
@@ -30,9 +33,11 @@
 #' }
 #'
 #' @return (data.table) The SUS score for each respondent.
+#'   There must be a column named `id_official` which contains the official
+#'   SUS question numbers from 1 to 10.
 #' @export
 #'
-get_sus_score_raw <- function(data) {
+get_sus_score_raw <- function(data, keep_respondents = FALSE) {
   ## Calculate corrected values:
   ## - between 0 and 4
   ## - inverse the even question-values (because the question meaning is also
@@ -51,7 +56,13 @@ get_sus_score_raw <- function(data) {
   # mean(res[["sus_score"]])
   # summary(res[["sus_score"]])
   # psych::describe(res[["sus_score"]])
-  return(res[["sus_score"]])
+  if (keep_respondents) {
+    res_list <- res[["sus_score"]]
+    names(res_list) <- res[["responder"]]
+    return(res_list)
+  } else {
+    return(res[["sus_score"]])
+  }
 }
 
 #' @title Calculate the SUS score

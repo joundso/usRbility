@@ -24,3 +24,5 @@ Suggests:
     testthat
 Encoding: UTF-8
 Language: en-US
+RoxygenNote: 7.1.2
+LazyData: true
