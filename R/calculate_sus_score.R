@@ -98,3 +98,12 @@ get_sus_stats <- function(data) {
 get_sus_mean <- function(data) {
   return(get_sus_stats(data = data)[["mean"]])
 }
+
+get_boxblot_per_sus_question <- function(data, with_question_text = FALSE){
+  data[, "id_official" := as.factor(get("id_official"))]
+  ggplot2::ggplot(data, ggplot2::aes(x = id_official, y = value)) +
+    ggplot2::geom_violin(trim = FALSE)
+  # ggplot2::coord_flip()
+  ggplot2::ggplot(data, ggplot2::aes(x=id_official, y=value)) +
+    ggplot2::geom_violin(trim=FALSE)
+}
